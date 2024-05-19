@@ -16,5 +16,13 @@ class Hero:
 
 
 
+class Game:
+    def __init__(self):
+        self.player = Hero("Player", 100, 10)
+        self.computer = Hero("Computer", 100, 10)
+
+
+
+
 
 
