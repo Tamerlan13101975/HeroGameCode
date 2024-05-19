@@ -29,4 +29,12 @@ class Game:
                 print(f"{self.player.name} wins!")
                 break
 
+            self.computer.attack(self.player)
+            print(f"{self.computer.name} attacks {self.player.name}!")
+            if not self.player.is_alive():
+                print(f"{self.computer.name} wins!")
+                break
 
+        if __name__ == "__main__":
+            game = Game()
+            game.start()
