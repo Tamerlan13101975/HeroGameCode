@@ -21,8 +21,12 @@ class Game:
         self.player = Hero("Player", 100, 10)
         self.computer = Hero("Computer", 100, 10)
 
-
-
-
+    def start(self):
+        while self.player.is_alive() and self.computer.is_alive():
+            self.player.attack(self.computer)
+            print(f"{self.player.name} attacks {self.computer.name}!")
+            if not self.computer.is_alive():
+                print(f"{self.player.name} wins!")
+                break
 
 
